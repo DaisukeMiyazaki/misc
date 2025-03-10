@@ -23,4 +23,4 @@ function greet(name: string): string {
 
 複数の段落も
 適切に処理
-されます。
+されます。 
