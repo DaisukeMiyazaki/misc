@@ -11,7 +11,7 @@
 original_file="$1"
 
 # コピー先のディレクトリ
-dest_dir="$HOME/digital-garden-jekyll-template/assets/media/public/"
+dest_dir="$HOME/DaisukeMiyazaki.github.io"
 
 if [ -z "$original_file" ]; then
   echo "Usage: ./copy_media.sh <file_path_that_you_want_to_copy_to_publish_folder>"
@@ -42,7 +42,7 @@ grep -Eo 'media\/public\/(.*?)$' "$original_file" | while read -r file_name; do
 done
 
 # コピー元のファイルそのものがmarkdownファイルである場合、こちらもコピーする
-md_dest_dir="$HOME/digital-garden-jekyll-template/_notes/"
+md_dest_dir="$HOME/DaisukeMiyazaki.github.io"
 if [ -f "$original_file" ]; then
   cp "$original_file" "$md_dest_dir"
   echo "Copied $original_file to $md_dest_dir"
